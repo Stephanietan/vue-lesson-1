@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Vue</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div>
+    <div id="app"></div>
+    <!-- <div class="app"></div> -->
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        greeting: 'Welcome to your Vue.js app!'
+      },
+      template: '<p>this is the greeting:  {{ greeting }}</p>'
+    })
+  </script>
+</body>
+</html>
