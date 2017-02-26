@@ -6,17 +6,25 @@
 </head>
 <body>
   <div>
-    <div id="app"></div>
-    <!-- <div class="app"></div> -->
+    <div id="app">
+      <my-component></my-component>
+      <my-component></my-component>
+      <my-component></my-component>
+    </div>
   </div>
 
   <script>
-    new Vue({
-      el: '#app',
-      data: {
-        greeting: 'Welcome to your Vue.js app!'
+    Vue.component('my-component', {
+      data: function() {
+        return {
+          greeting: 'Welcome to your Vue.js app!'
+        }
       },
       template: '<p>this is the greeting:  {{ greeting }}</p>'
+    })
+
+    new Vue({
+      el: '#app'
     })
   </script>
 </body>
