@@ -18,17 +18,18 @@
   </div>
 
   <script>
-    Vue.component('my-component', {
+    let comp = {
       data: function() {
         return {
           greeting: 'Welcome to your Vue.js app!'
         }
       },
       template: '<p>this is the greeting:  {{ greeting }}</p>'
-    })
+    }
 
     new Vue({
-      el: '#app'
+      el: '#app',
+      components : { 'my-component' : comp  }
     })
 
     new Vue({
